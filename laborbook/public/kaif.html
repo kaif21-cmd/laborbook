@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> 🛠️Labor Booking Portal</title>
+        
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-+FPCf2WV8+4AH/MZvIdzrUX7kbSwc06IwV6rYb3vJU0tkDfB2C6DTrSfRvBfiZK9" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/2e8882fc96.js" crossorigin="anonymous"></script>
+      </head>
+    <!-- Your CSS styles for the preloader here -->
+    <style>
+        .loader {
+            width: 48px;
+            height: 48px;
+            display: block;
+            margin: 15px auto;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #FFF;
+            box-sizing: border-box;
+            animation: rotation 1s linear infinite;
+            z-index: 9999; /* Ensure the preloader is on top of everything */
+        }
+        
+        .loader::after,
+        .loader::before {
+            content: '';  
+            box-sizing: border-box;
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            top: 50%;
+            left: 50%;
+            transform: scale(0.5) translate(0, 0);
+            background-color: #FFF;
+            border-radius: 50%;
+            animation: animloader 1s infinite ease-in-out;
+        }
+
+        .loader::before {
+            background-color: #FF3D00;
+            transform: scale(0.5) translate(-48px, -48px);
+        }
+
+        @keyframes rotation {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        } 
+        @keyframes animloader {
+            50% {
+                transform: scale(1) translate(-50%, -50%);
+            }
+        }
+        .header-text {
+          text-align: center;
+          margin-top: 110px;
+          color: black;
+          overflow: hidden;
+        }
+    
+        .header-text h1 {
+          display: inline-block;
+          animation: scroll 10s linear infinite;
+        }
+    
+        @keyframes scroll {
+          0% {
+            transform: translateX(100%);
+          }
+          100% {
+            transform: translateX(-100%);
+          }
+        }
+    </style>
+</head>
+<body>
+    <!-- Your website content here (hidden initially) -->
+    <div id="websiteContent" style="display: none;">
+        <!-- Your website content goes here -->
+        <nav class="navbar">
+            <h1 style="text-align:center"> 🏗️ Labour Booking Web APP 📲</h1>
+            <input type="checkbox" id="check" />
+            <label class="menu-icon" for="check">&#9776;</label>
+            <ul>
+              <li><a style="color:cyan;" href="#Electricians">Electricians</a></li>
+              <li><a style="color:cyan;"  href="#Plumber">Plumber</a></li>
+              <li><a style="color:cyan;" href="#Carpenter">Carpenter</a></li>
+              <li><a style="color:cyan;" href="#labour">Labour</a></li>
+              <li><a style="color:cyan;"href="#servant">Servant</a></li>
+              <li><a style="color:cyan;"href="#Guards">Guards</a></li>
+              <li><a style="color:cyan;"href="#Mechanic">Mechanic</a></li>
+              <li><a style="color:cyan;"href="#Maid">Maid</a></li>
+            </ul>
+          </nav>
+          <header class="header-section">
+            <img src="plumber.png" alt="Header Image">
+            <div class="header-text">
+              <h1 style="margin-top:110px;color:black"><marquee style="color:aquamarine ">⚡ Labour Book - Book your Labour Instantly by just one call ☎️👷‍♂️👷‍♀️</marquee></h1>
+            </div>
+          </header>
+         
+          <h1 style="color:cyan;text-align:center; font-weight:30px; font-size:35px;">Our services <hr></h1>
+          <p style="color:cyan;text-align:center;font-weight:25px;font-size:25px;">Here, you can hire workers of your choice. We provide ⚡ electricians, 🚰 plumbers, and 🔨 carpenters  and many more for your needs</p>
+          <br>
+          <p style="color:cyan;text-align:center;font-weight:25px;font-size:25px;">📅 One time ⏰ | ⌛ Part-time 🌓 | 🛠️ Service 👷</p>
+          <p style="color:cyan;text-align:center;font-weight:25px;font-size:25px;">🔗 Connect instantly with all types of daily laborers 💼 </p>
+          <div class="scrolling-text-container"></div><p style="color:cyan; text-align:center;font-weight:20px;font-size:25px;" ><marquee style="text-align:center;" direction="up" scrollamount="5" scrolldelay="50">
+            Electrician <br> <br> Plumbers <br> <br> Maid<br> <br>  Carpenter<br> <br>  Home maker <br> <br> Mechanic <br>  <br> And Many More<br><br> Thank you!.
+          </marquee>
+          <hr>
+          <main>
+            <section id="Electricians">
+              <section class="service-category">
+                <h2>⚡ Electricians </h2>
+                <h3>इलेक्ट्रीशियन 🔌</h3>
+                <img src="Electrician-bro.png" alt="Electrician Image" class="service-image">
+                <a href="tel:9648338838"class="calling-button">Call Now 📞  </a>
+              </section>
+            </section>
+            
+          <section id="Plumber">
+            <section class="service-category">
+              <h2> 🚰 Plumber </h2>
+              <h3>प्लंबर 🔧🪠</h3>
+              <img src="plumber.png" alt="Electrician Image" class="service-image">
+              <a href="tel:9648338838" class="calling-button">Call Now</a>
+            </section>
+          </section>
+          <section id="Carpenter">
+            <section class="service-category">
+              <h2>🔨 Carpenter 🪚📏</h2>
+                <h3>बढ़ई 🔨</h3>
+                <img src="carpenter (1).png" alt="Electrician Image" class="service-image">
+              <a href="tel:9648338838" class="calling-button">Call Now</a>
+              </section>
+            </section>
+            <section id="labour">
+              <section class="service-category">
+                <h2>Labour 🏗️</h2>
+                <h3>मजदूर 👷‍♂️</h3>
+                <img src="labour.png" alt="Electrician Image" class="service-image">
+                <a href="tel:9648338838" class="calling-button">Call Now</a>
+              </section>
+            </section>
+              <section id="Guards">
+              <section class="service-category">
+                <h2>🛡️ Guards 👮‍♂️</h2>
+                <h3>गार्ड 🏢</h3>
+                <img src="Vault-bro.png" alt="Electrician Image" class="service-image">
+              <a href="tel:9648338838" class="calling-button">Call Now</a>
+              </section>
+            </section>
+            <section id="Mechanic">
+              <section class="service-category">
+                <h2>Mechanic 🔧</h2>
+                <h3>मैकेनिक 👨‍🔧🔩</h3>
+                <img src="Processing-cuate.png" alt="Electrician Image" class="service-image">
+              <a href="tel:9648338838" class="calling-button">Call Now</a>
+              </section>
+              </section>
+              <section id="Maid">
+              <section class="service-category">
+                <h2>🧹 Maid 👩‍🍳</h2>
+                <h3>नौकरानी 🏠</h3>
+                <img src="maid.png" alt="Electrician Image" class="service-image">
+                <a href="tel:9648338838" class="calling-button">Call Now</a>
+              </section>
+            </section>
+            
+          
+            <!-- Add more service categories as needed -->
+          </main>
+        <!-- Add your website content here -->
+        <div id="bookingFormOverlay" class="overlay">
+            <div class="booking-form">
+              <span class="close-button" onclick="closeBookingForm()">&times;</span>
+              <h2>Book a Laborer</h2>
+              <form action="/labourdata1" method="POST">
+               <label for="name">Name:</label>
+               <input type="text" id="name" name="name" required>
+               <label for="phone">Contact:</label>
+               <input type="text" id="phone" name="phone" required>
+                <label for="service">Service</label>
+                <input type="text" id="service" readonly>
+                <label for="date">Date:</label>
+                <input type="text" id="date" name="date" required>
+                <label for="time">time:</label>
+                <input type="time" id="time" name="time" required>
+                <label for="notes">Notes:</label>
+                <textarea id="notes" rows="4"></textarea>
+                <button type="submit">Submit</button>
+              </form>
+            </div>
+          </div>
+          <footer>
+            <div class="footer-content">
+              <p style="color:cyan;text-align:center;font-size:20px;">&copy; 2023 Labor Booking Portal. All rights reserved.</p>
+              <p style="color:cyan;text-align:center;font-size:15px;">Design By <b><a style="color: cyan;">Kaif Siddique & Shahan Khan </a>
+              </b></p>
+              <p style="color:cyan;text-align:center;font-size:15px;"> Our motive for LaborBook is to make it easy for workers to find jobs and for employers to find the right workers. We want to simplify the job search process, offer various job options, and ensure fairness and transparency in the labor market. By doing so, we aim to create a thriving and inclusive labor community where everyone can find suitable work opportunities and contribute to their own success and the success of businesses
+            </p>
+              <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                <!-- Add more social icons as needed -->
+              </div>
+             
+          </footer>
+          <section id="contact"></section>
+  <h4 style="color:cyan;text-align:center">Contact us for more detail</h4>
+  <p style="color:cyan;text-align:center"> <i class="fa-sharp fa-solid fa-paper-plane"><br></i> LabourBookdelhi@gmail.com</p>
+  <p style="color:cyan; text-align:center"><i class="fa-solid fa-phone"></i> 9648338838 ,7835888409</p>
+  <p style="color:cyan;text-align:center">
+    If you'd like to join us as a worker, please ⬇️ download and 📝 fill out our application form. <a href="labour form (1).pdf" download>
+       <br><br> <button style="background-color:cyan; border-color:cyan;" class="button">👷‍♂️Join as labor🔨🛠️ </button>
+      </a>
+      <form>
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        <button style="background-color:cyan; color:black;" type="submit">Submit <i class="fa-sharp fa-solid fa-paper-plane"><br></i></button>
+      </form>
+      <footer>
+        <a href="#" style="color:cyan;">🏠 Home</a>
+        <a href="#" style="color:cyan;">ℹ️ About</a>
+        <a href="#" style="color:cyan;">📄Terms</a>
+        <a href="#" style="color:cyan;">🔒Privacy Policy</a>
+        <br>
+        <p style="color:cyan;">&copy; All Rights Reserved 2023 Labour Book Delhi 2023  🏗️</p>
+    </footer>
+
+    </div>
+    
+</div>
+
+</section>
+
+
+       
+    </div>
+
+    <!-- Preloader element -->
+    <span class="loader">
+    </span>
+
+    <!-- JavaScript to hide the preloader after 4 seconds -->
+    <script>
+        var preloader = document.querySelector('.loader');
+        var websiteContent = document.getElementById('websiteContent');
+
+        function hidePreloader() {
+            preloader.style.display = 'none';
+            websiteContent.style.display = 'block'; // Display the website content
+        }
+
+        // Call the hidePreloader function after 4 seconds (4000 milliseconds)
+        setTimeout(hidePreloader, 4000);
+    </script>
+    <script>
+        function toggleMenu() {
+          var menu = document.getElementById("menu");
+          menu.classList.toggle("active");
+        }
+      </script>
+</body>
+</html>

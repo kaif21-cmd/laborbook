@@ -1,0 +1,619 @@
+/* CSS to style the web portal */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+  }
+  #loading {
+    width: 100%;
+    height: 100vh;
+    display: block;
+    margin:15px auto;
+    position: relative;
+    color: #FFF;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    z-index: 9999;
+  }
+  #loading::after,
+  #loading::before {
+    content: '';  
+    box-sizing: border-box;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 50%;
+    left: 50%;
+    transform: scale(0.5) translate(0, 0);
+    background-color: #FFF;
+    border-radius: 50%;
+    animation: animloader 1s infinite ease-in-out;
+  }
+  #loading::before {
+    background-color: #FF3D00;
+    transform: scale(0.5) translate(-48px, -48px);
+  }
+  
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  } 
+  @keyframes animloader {
+      50% {
+        transform: scale(1) translate(-50%, -50%);
+  }
+  }
+      
+ 
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem;
+  }
+  
+  
+  .service-category {
+    width: 300px;
+    padding: 1rem;
+    text-align: center;
+    margin: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .booking-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+  
+  .booking-form {
+    background-color: #fff;
+    width: 400px;
+    padding: 1rem;
+    border-radius: 5px;
+  }
+  
+  .close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  textarea {
+    width: 100%;
+    resize: vertical;
+  }
+  
+  button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  /* CSS to style the web portal (updated styles) */
+/* Styles for the footer */
+footer {
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .footer-content img {
+    max-width: 50px;
+    height: auto;
+    margin-right: 10px;
+  }
+  /* CSS to style the web portal (updated styles with responsiveness) */
+/* Styles for the footer */
+footer {
+    /* Footer styles as before */
+  }
+  
+  /* Styles for the service categories */
+  .service-category {
+    /* Updated styling for better layout */
+    color: #ccc;
+    width: 100%;
+    max-width: 300px;
+    padding: 1rem;
+    text-align: center;
+    margin: 1rem auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .service-category img {
+    /* Adjust image size for better presentation */
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  
+  .service-category ul {
+    /* Additional service points styling */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .service-category ul li {
+    margin-bottom: 0.5rem;
+    text-align: left; /* Align service points to the left */
+  }
+  
+  /* Responsive styles using media queries */
+  @media screen and (min-width: 768px) {
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+  }
+  
+  @media screen and (min-width: 1024px) {
+    .service-grid {
+      grid-template-columns: repeat(3, 1fr);
+      max-width: 1200px;
+    }
+  }
+  /* CSS to style the web portal with hover effects */
+/* Styles for the service categories */
+.service-category {
+    /* Updated styling for better layout */
+    width: 300px;
+    padding: 1rem;
+    text-align: center;
+    margin: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s; 
+    border-color: #00FFFF;
+    /* Add transition for smooth hover effect */
+  }
+  
+  
+  
+  .service-category img {
+    /* Adjust image size for better presentation */
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  
+  .service-category ul {
+    /* Additional service points styling */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .service-category ul li {
+    margin-bottom: 0.5rem;
+    text-align: left; /* Align service points to the left */
+  }
+  
+  /* Styles for the booking button */
+  .booking-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Add transition for smooth hover effect */
+  }
+  
+  .booking-button:hover {
+    background-color: #0056b3; /* Change background color on hover */
+  }
+  /* CSS to style the web portal (updated styles with responsiveness) */
+/* Styles for the footer */
+footer {
+    background-color: black;;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
+    background-color: black;/* Allow content to wrap on smaller screens */
+  }
+  
+  .footer-content img {
+    max-width: 50px;
+    height: auto;
+    margin-right: 10px;
+  }
+  
+  .social-icons {
+    margin-top: 20px;
+  }
+  
+  .social-icon {
+    color:cyan;
+    font-size: 24px;
+    margin: 5px;
+    text-decoration: none;
+  }
+  
+  /* Responsive styles using media queries */
+  @media screen and (max-width: 768px) {
+    .footer-content img {
+      max-width: 30px;
+    }
+  }
+/* CSS to style the web portal (updated styles with responsiveness) */
+/* Styles for the header */
+.header-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.header-section img {
+  width: 100%;
+  height: auto;
+}
+
+.header-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+}
+
+.header-text h1 {
+  color: black;
+}
+
+.marquee-container {
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+}
+
+.marquee-content {
+  animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+      transform: translateX(100%);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
+}
+  .labour-book {
+    margin-top: 120px;;
+    border-radius: 5px;
+    padding: 5px;
+    color:black;
+    font-weight:300px;
+    font-size:30px;
+   
+  }
+  
+  /* Styling for the form container */
+/* Styling for the form container */
+/* Styling for the form container */
+#booking-form {
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+/* Styling for form labels */
+#booking-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* Styling for input fields */
+#booking-form input[type="text"],
+#booking-form input[type="date"],
+#booking-form input[type="time"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Styling for the read-only service input */
+#booking-form input[readonly="readonly"] {
+  background-color: #eee;
+}
+
+/* Styling for the notes textarea */
+#booking-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Styling for the submit button */
+#booking-form button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Hover effect for the submit button */
+#booking-form button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Hamburger menu styles */
+
+.calling-button {
+  background-color: cyan;
+  color:black;
+  padding: 10px 14px; /* Adjust the padding to make the button smaller */
+  font-size: 14px; /* Adjust the font size to make the button text smaller */
+  border-radius: 5px;
+  margin-top:16px;
+  padding-top:7px;
+  text-decoration: none;
+}
+
+/* Hover effect for the calling button */
+.calling-button:hover {
+  background-color: #45a049; /* Change background color on hover */
+}
+.header-section {
+  position: relative;
+}
+
+.header-section img {
+  width: 100%;
+  height: auto;
+}
+
+.header-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.header-text h1 {
+  font-size: 36px;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Styles for the navbar */
+/* Styles for the navbar */
+.navbar {
+  background-color: rgb(22,  36);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding: 0 20px;
+}
+
+.navbar h1 {
+  font-size: 24px;
+  color:cyan;
+  cursor: pointer;
+  margin: 0;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  margin-left: 20px;
+  font-size: 16px;
+}
+
+.navbar ul li a {
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-size: 16px;
+}
+
+.navbar ul li a:hover {
+  color: cyan;
+}
+
+/* Hamburger menu styles */
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Media query for responsive design */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .navbar h1 {
+    margin-bottom: 10px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar ul li {
+    margin: 10px 0;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .navbar ul:not(.menu-icon) {
+    display: none;
+  }
+
+  #check {
+    display: none;
+  }
+
+  #check:checked ~ ul {
+    display: flex;
+  }
+}
+@keyframes marquee {
+  0% { transform: translateY(100%); }
+  100% { transform: translateY(-100%); }
+}
+
+.scrolling-text-container {
+  height: 50px; /* Set the desired height for the scrolling container */
+  overflow: hidden;
+}
+
+.scrolling-text {
+  white-space: nowrap;
+  animation: marquee 10s linear infinite;
+}
+
+.form-container {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color:cyan;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  background: black;
+  padding: 10px;
+  border: 1px solid cyan;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button-1 {
+  background-color:cyan;
+  color:black;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button-1:hover {
+  background-color: cyan;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 600px) {
+  .form-container {
+    padding: 10px;
+    max-width: 100%;
+  }
+}
+
+/* Cyan-colored heading */
+h2 {
+  color: #00FFFF;
+}
+/* Define the CSS styles for the download button */
+.download-button {
+  background-color:cyan; /* Button background color */
+  color: #fff; /* Button text color */
+  padding: 5px 0px; /* Padding around the button text */
+  border: none; /* Remove button border */
+  border-radius: 5px; /* Rounded corners */
+  text-align: center; /* Center the button text */
+  text-decoration: none; /* Remove underlines from the text */
+  display: inline-block; /* Make it an inline block */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Change cursor on hover */
+}
+
+/* Style the button on hover */
+.download-button:hover {
+  background-color: cyan/* Change background color on hover */
+}
+h3{
+  color:cyan;
+}
